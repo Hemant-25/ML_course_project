@@ -14,22 +14,17 @@
 	 <h2>Predict heart disease</h2>
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="number" name="age" placeholder="Age (Enter your age)" required="required" />
-    	<input type="number" name="sex" placeholder="Sex (Male:0 / Female:1)" required="required" />
-    	<input type="number" name="chest_pain" placeholder="Chest pain type (ASY/NAP/ATA)" required="required" />
+    	<input type="number" name="sex" placeholder="Sex (Male: 1 / Female: 0)" required="required" />
+    	<input type="number" name="chest_pain" placeholder="Chest pain type (ASY/NAP/ATA/TA)" required="required" />
     	<input type="number" name="resting_bp" placeholder="Resting BP (mm Hg)" required="required" />
     	<input type="number" name="fasting_bs" placeholder="Fasting BS (if FastingBs>120: 1, else:0)" required="required" />
     	<input type="number" name="resting_ecg" placeholder="Resting ECG (Normal/St/LVH)" required="required" />
     	<input type="number" name="max_hr" placeholder="Max heart rate (60-202)" required="required" />
     	<input type="number" name="exercise_angina" placeholder="Exercise Angina (Yes:Y, No:N)" required="required" />
-    	<input type="number" name="old_peak" placeholder="old peak" required="required" />
-    	<input type="number" name="st_slope" placeholder="st slope (Up/Flat/Down)" required="required" />
+    	<input type="number" name="old_peak" placeholder="Old peak" required="required" />
+    	<input type="number" name="st_slope" placeholder="St slope (Up/Flat/Down)" required="required" />
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
-   <br>
-   <br>
-   Your Personality Type is : 
-   {{ prediction_text }}
-
 <style>
   @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 .btn { display: inline-block; *display: inline; *zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em; }
