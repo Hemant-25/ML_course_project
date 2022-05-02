@@ -15,14 +15,14 @@
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="number" name="age" placeholder="Age (Enter your age)" required="required" />
     	<input type="number" name="sex" placeholder="Sex (Male:0 / Female:1)" required="required" />
-    	<input type="number" name="chest pain" placeholder="chest pain" required="required" />
-    	<input type="number" name="resting bp" placeholder="resting bp" required="required" />
-    	<input type="number" name="fasting bp" placeholder="fasting bp" required="required" />
-    	<input type="number" name="resting ecg" placeholder="resting ecg" required="required" />
-    	<input type="number" name="max hr" placeholder="max hr" required="required" />
-    	<input type="number" name="exercise angina" placeholder="exercise angina" required="required" />
-    	<input type="number" name="old peak" placeholder="old peak" required="required" />
-    	<input type="number" name="st slope" placeholder="st slope" required="required" />
+    	<input type="number" name="chest_pain" placeholder="Chest pain type (ASY/NAP/ATA)" required="required" />
+    	<input type="number" name="resting_bp" placeholder="Resting BP (mm Hg)" required="required" />
+    	<input type="number" name="fasting_bs" placeholder="Fasting BS (if FastingBs>120: 1, else:0)" required="required" />
+    	<input type="number" name="resting_ecg" placeholder="Resting ECG (Normal/St/LVH)" required="required" />
+    	<input type="number" name="max_hr" placeholder="Max heart rate (60-202)" required="required" />
+    	<input type="number" name="exercise_angina" placeholder="Exercise Angina (Yes:Y, No:N)" required="required" />
+    	<input type="number" name="old_peak" placeholder="old peak" required="required" />
+    	<input type="number" name="st_slope" placeholder="st slope (Up/Flat/Down)" required="required" />
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
    <br>
