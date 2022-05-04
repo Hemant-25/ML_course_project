@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('model2.pkl', 'rb'))
+model = pickle.load(open('modelfinal.pkl', 'rb'))
 
 
 @app.route('/')
@@ -69,8 +69,11 @@ def predict():
 
 
     prediction = model.predict(final_features)
-
-    return render_template('index.html', prediction_text=' Probability of Heart Disease is : {}'.format(prediction))
+    if(prediction[0]==0):
+        output="Safe"
+    else:
+        output='At Risk'
+    return render_template('index.html', prediction_text=' Report Result : {}'.format(output))
 
 
 if __name__ == "__main__":
